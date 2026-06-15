@@ -17,7 +17,7 @@ export const heroSlides = [
   "images/yoga3.jpg",
 ];
 
-export const aboutImage = "/images/india.png";
+export const aboutImage = "images/india.png"
 
 export const practices = [
   { title: "Hatha Yoga", img: ph(400, 300, "Hatha") },
