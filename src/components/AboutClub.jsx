@@ -6,9 +6,13 @@ export default function AboutClub() {
     <section className="about" id="about">
       <div className="container about__grid">
         <div className="about__text">
-          <span className="about__mark" aria-hidden="true">❀</span>
+          <img
+            className="about__logo"
+            src="/images/logoIndia.png"
+            alt="India Yoga logo"
+          />
           <h2 className="about__title">
-            About <span>Club</span>
+            A propos <span>Yoga India</span>
           </h2>
           <p>
             Every human should have at least one simple spiritual practice in
@@ -18,9 +22,12 @@ export default function AboutClub() {
         </div>
 
         <div className="about__media">
-          <div className="about__circle">
-            <img src={aboutImage} alt="A person meditating in lotus pose" />
-          </div>
+          <div className="about__disc" aria-hidden="true"></div>
+          <img
+            className="about__person"
+            src={aboutImage}
+            alt="India, yoga teacher, in prayer pose"
+          />
         </div>
       </div>
     </section>

@@ -12,12 +12,12 @@ const ph = (w, h, label) =>
   `https://placehold.co/${w}x${h}/1a1a1a/ffc107?font=space-mono&text=${encodeURIComponent(label)}`
 
 export const heroSlides = [
-  ph(1600, 900, 'Yoga 1'),
-  ph(1600, 900, 'Yoga 2'),
-  ph(1600, 900, 'Yoga 3'),
+  '/images/yoga1.jpg',
+  '/images/yoga2.jpg',
+  '/images/yoga3.jpg',
 ]
 
-export const aboutImage = ph(600, 600, 'Meditation')
+export const aboutImage = '/images/india.png'
 
 export const practices = [
   { title: 'Hatha Yoga',    img: ph(400, 300, 'Hatha') },
@@ -25,7 +25,7 @@ export const practices = [
   { title: 'Jivamukti Yoga',img: ph(400, 300, 'Jivamukti') },
   { title: 'Hot Yoga',      img: ph(400, 300, 'Hot Yoga') },
   { title: 'Hatha Vinyasa', img: ph(400, 300, 'Vinyasa') },
-  { title: 'Meditation',    img: ph(400, 300, 'Meditation') },
+  { title: 'India',    img: ph(400, 300, 'Meditation') },
   { title: 'Kundalini',     img: ph(400, 300, 'Kundalini') },
   { title: 'Power Yoga',    img: ph(400, 300, 'Power') },
 ]
@@ -52,14 +52,13 @@ export const carouselSlides = [
 export const ctaImage = ph(1400, 500, 'On the mat')
 
 export const cities = [
-  { city: 'Sydney',      address: '45 Pirrama Rd, Pyrmont NSW 2025' },
-  { city: 'Melbourne',   address: '163 Collins St, Melbourne VIC 3000' },
-  { city: 'Los Angeles', address: '800 W Olympic Blvd, Los Angeles CA 90015' },
+  { city: 'Montigny',      address: '45 Pirrama Rd, Pyrmont NSW 2025' },
+  { city: 'Le Havre',   address: '163 Collins St, Melbourne VIC 3000' },
 ]
 
 export const testimonials = [
-  { name: 'Dilshad',       avatar: ph(120, 120, ':)'), body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio.' },
-  { name: 'Sabir Ali',     avatar: ph(120, 120, ':)'), body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio.' },
-  { name: 'Dipankar Kumar',avatar: ph(120, 120, ':)'), body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio.' },
+  { name: 'Edouard',       avatar: ph(120, 120, ':)'), body: 'Excellente prof de yoga! Dès mon premier cours, j\'ai ressenti un changement positif dans mon corps et mon esprit. Je me sens plus souple et surtout beaucoup plus serein au quotidien' },
+  { name: 'Chloé',     avatar: ph(120, 120, ':)'), body: 'J\'ai pu assister un cours duo avec mon mari. Il n\'est pas souple mais il a beaucoup appris! On a adoré!' },
+  { name: 'Michelle W.',avatar: ph(120, 120, ':)'), body: 'India speaks English fluently! I\'m English and managed to understand her lesson!' },
   { name: 'Satya Narayan', avatar: ph(120, 120, ':)'), body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio.' },
 ]

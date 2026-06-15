@@ -4,7 +4,13 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer__inner">
-        <span className="footer__logo" aria-hidden="true">🧘</span>
+        <a href="#top" className="nav__logo" aria-label="India Yoga home">
+          <img
+            className="nav__logo-img"
+            src="/images/logoIndia.png"
+            alt="India Yoga"
+          />
+        </a>
         <p>© {new Date().getFullYear()} Yoga Club. Many practices, one intention.</p>
         <nav className="footer__links">
           <a href="#about">About</a>

@@ -15,8 +15,9 @@
 
 .hero__slide img {
   width: 100%;
-  height: clamp(320px, 56vh, 620px);
+  height: clamp(220px, 56vh, 620px);
   object-fit: cover;
+  object-position: center 70%;
 }
 
 .hero__dots {

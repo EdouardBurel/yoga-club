@@ -19,7 +19,7 @@ export default function Contact() {
     <section className="contact" id="contact">
       <div className="container contact__grid">
         <div className="contact__info">
-          <h2 className="contact__heading">Contact Us</h2>
+          <h2 className="contact__heading">Me contacter</h2>
           <p className="contact__lead">
             Any questions or remarks? Just write us a message.
           </p>

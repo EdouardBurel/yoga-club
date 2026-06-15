@@ -16,11 +16,11 @@
   margin-inline: auto;
 }
 
-.about__mark {
-  font-size: 40px;
-  color: var(--ink);
+.about__logo {
   display: block;
-  margin-bottom: 10px;
+  width: 250px;
+  height: auto;
+  margin: 0 auto 16px;
 }
 
 .about__title {
@@ -29,31 +29,56 @@
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   margin-bottom: 16px;
 }
-.about__title span { color: var(--gold); }
+.about__title span {
+  color: var(--gold);
+}
 
 .about__text p {
   color: var(--ink-soft);
   margin-bottom: 26px;
 }
 
-.about__media { display: flex; justify-content: center; }
-
-.about__circle {
-  width: clamp(260px, 34vw, 380px);
-  height: clamp(260px, 34vw, 380px);
-  border-radius: 50%;
-  background: var(--yellow);
-  overflow: hidden;
-  display: grid;
-  place-items: end center;
+/* ---- disc behind, cutout in front ---- */
+.about__media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* her bottom sits on the baseline */
+  min-height: 500px;
 }
-.about__circle img {
-  width: 86%;
-  height: 92%;
-  object-fit: cover;
-  object-position: top center;
+
+.about__disc {
+  position: absolute;
+  left: 50%;
+  bottom: 96px; /* KNOB 1: how high the disc sits behind her */
+  transform: translateX(-50%);
+  width: clamp(320px, 38vw, 430px); /* KNOB 2: disc size — bigger now */
+  height: clamp(320px, 38vw, 430px);
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 42% 34%,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0) 62%
+    ),
+    linear-gradient(180deg, #ffd64d 0%, #ffc107 50%, #f2a800 100%);
+  z-index: 0;
+}
+
+.about__person {
+  position: relative;
+  z-index: 1;
+  width: clamp(300px, 36vw, 400px); /* KNOB 3: her size vs the disc */
+  height: auto;
+  transform: translateY(-40px); /* raise her toward the circle's center */
+  filter: drop-shadow(0 12px 16px rgba(0, 0, 0, 0.16));
 }
 
 @media (max-width: 760px) {
-  .about__grid { grid-template-columns: 1fr; }
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+  .about__media {
+    min-height: 420px;
+  }
 }
