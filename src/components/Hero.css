@@ -1,0 +1,39 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.hero__track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.hero__slide {
+  flex: 0 0 100%;
+}
+
+.hero__slide img {
+  width: 100%;
+  height: clamp(320px, 56vh, 620px);
+  object-fit: cover;
+}
+
+.hero__dots {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.hero__dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.55);
+  padding: 0;
+}
+.hero__dot.is-active { background: var(--yellow); }

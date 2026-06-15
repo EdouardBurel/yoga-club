@@ -1,0 +1,57 @@
+.practices {
+  background: var(--yellow);
+  padding: 70px 0;
+}
+
+.practices .section-title { margin-bottom: 46px; }
+
+.practices__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 14px 14px 22px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card__img {
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.card__img img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.card:hover .card__img img { transform: scale(1.05); }
+
+.card__title {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.card__more {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  border-bottom: 1.5px solid var(--ink);
+  padding-bottom: 2px;
+}
+.card__more:hover { color: var(--gold); border-color: var(--gold); }
+
+@media (max-width: 980px) {
+  .practices__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .practices__grid { grid-template-columns: 1fr; }
+}

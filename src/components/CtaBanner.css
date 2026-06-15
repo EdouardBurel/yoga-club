@@ -1,0 +1,37 @@
+.cta {
+  background-size: cover;
+  background-position: center;
+}
+
+.cta__overlay {
+  background: rgba(20, 20, 20, 0.6);
+  padding: 80px 0;
+}
+
+.cta__inner {
+  text-align: center;
+  color: var(--white);
+  max-width: 680px;
+}
+.cta__inner.container { margin-inline: auto; }
+
+.cta__title {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+}
+
+.cta__body {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.cta__btn {
+  border-color: var(--white);
+  color: var(--white);
+}
+.cta__btn:hover { background: var(--white); color: var(--ink); }

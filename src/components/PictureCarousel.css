@@ -1,0 +1,44 @@
+.pcarousel {
+  background: var(--yellow);
+  padding: 50px 0;
+}
+
+.pcarousel__frame {
+  position: relative;
+  max-width: 760px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pcarousel__stage {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+.pcarousel__stage img {
+  width: 100%;
+  height: clamp(280px, 42vw, 460px);
+  object-fit: cover;
+}
+
+.pcarousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 1.6rem;
+  line-height: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.pcarousel__arrow.left { left: -10px; }
+.pcarousel__arrow.right { right: -10px; }
+.pcarousel__arrow:hover { background: var(--ink); color: var(--white); }
