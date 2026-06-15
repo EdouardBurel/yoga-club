@@ -7,7 +7,7 @@ export default function Footer() {
         <a href="#top" className="nav__logo" aria-label="India Yoga home">
           <img
             className="nav__logo-img"
-            src="/images/logoIndia.png"
+            src="images/logoIndia.png"
             alt="India Yoga"
           />
         </a>

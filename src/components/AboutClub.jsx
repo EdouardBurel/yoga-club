@@ -1,5 +1,5 @@
-import { aboutImage } from '../data.js'
-import './AboutClub.css'
+import { aboutImage } from "../data.js";
+import "./AboutClub.css";
 
 export default function AboutClub() {
   return (
@@ -8,7 +8,7 @@ export default function AboutClub() {
         <div className="about__text">
           <img
             className="about__logo"
-            src="/images/logoIndia.png"
+            src="images/logoIndia.png"
             alt="India Yoga logo"
           />
           <h2 className="about__title">
@@ -18,7 +18,9 @@ export default function AboutClub() {
             Every human should have at least one simple spiritual practice in
             their life. With it, you will live well and find a calmer mind.
           </p>
-          <a className="btn-outline" href="#about">Read more</a>
+          <a className="btn-outline" href="#about">
+            Read more
+          </a>
         </div>
 
         <div className="about__media">
@@ -31,5 +33,5 @@ export default function AboutClub() {
         </div>
       </div>
     </section>
-  )
+  );
 }
