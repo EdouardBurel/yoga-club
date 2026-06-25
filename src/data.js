@@ -12,12 +12,13 @@ const ph = (w, h, label) =>
   `https://placehold.co/${w}x${h}/1a1a1a/ffc107?font=space-mono&text=${encodeURIComponent(label)}`;
 
 export const heroSlides = [
-  "images/yoga1.jpg",
-  "images/yoga2.jpg",
-  "images/yoga3.jpg",
+  "images/indiaTitle.png",
+  "images/back.jpg",
+  "images/bricks.jpg",
+  "images/lotus2.jpg",
 ];
 
-export const aboutImage = "images/india.png"
+export const aboutImage = "images/indiav2.jpg"
 
 export const practices = [
   { title: "Hatha Yoga", img: ph(400, 300, "Hatha") },
@@ -58,14 +59,14 @@ export const cities = [
 
 export const testimonials = [
   {
-    name: "Edouard",
+    name: "Jessica",
     avatar: ph(120, 120, ":)"),
-    body: "Excellente prof de yoga! Dès mon premier cours, j'ai ressenti un changement positif dans mon corps et mon esprit. Je me sens plus souple et surtout beaucoup plus serein au quotidien",
+    body: "I highly recommend India's yoga lessons - if you feel the need to reconnect your mind and body then look no further! India's calm and soothing voice will immediately put you at ease from the start and you'll feel your body relax with every breath 🧘",
   },
   {
-    name: "Chloé",
+    name: "Hélène",
     avatar: ph(120, 120, ":)"),
-    body: "J'ai pu assister un cours duo avec mon mari. Il n'est pas souple mais il a beaucoup appris! On a adoré!",
+    body: "Depuis 2024 , j'apprécie beaucoup les cours de Hatha et Yin Yoga d' India avec et sans musique. Bienveillance et Douceur dans sa pratique. Quelques exercices de méditation guidée relaxante.Une voix très apaisante et une touche ' so British' qui signent sa singularité.",
   },
   {
     name: "Michelle W.",
@@ -73,8 +74,8 @@ export const testimonials = [
     body: "India speaks English fluently! I'm English and managed to understand her lesson!",
   },
   {
-    name: "Satya Narayan",
+    name: "Kerry",
     avatar: ph(120, 120, ":)"),
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio.",
+    body: "I really enjoy India's yoga lessons and her outstanding savoir faire. India is an exceptional yoga teacher with excellent interpersonal skills. She is kind and caring and looks after her students wonderfully. She creates a zen, peaceful ambience which really helps me unwind and chill. I highly recommend her lessons!",
   },
 ];

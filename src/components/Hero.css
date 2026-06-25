@@ -16,7 +16,7 @@
 .hero__slide img {
   width: 100%;
   height: clamp(220px, 56vh, 620px);
-  object-fit: cover;
+  object-fit: contain;
   object-position: center 70%;
 }
 

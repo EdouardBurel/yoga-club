@@ -5,7 +5,7 @@ export default function Practices() {
   return (
     <section className="practices" id="practices">
       <div className="container">
-        <h2 className="section-title">Many Practices, One Intention</h2>
+        <h2 className="section-title">Ce que je propose</h2>
 
         <div className="practices__grid">
           {practices.map((p) => (

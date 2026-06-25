@@ -8,18 +8,18 @@ export default function AboutClub() {
         <div className="about__text">
           <img
             className="about__logo"
-            src="images/logoIndia.png"
+            src="images/logov.png"
             alt="India Yoga logo"
           />
           <h2 className="about__title">
-            A propos <span>Yoga India</span>
+            A propos <span>Yoga with India</span>
           </h2>
           <p>
-            Every human should have at least one simple spiritual practice in
-            their life. With it, you will live well and find a calmer mind.
+            Retrouvez calme, souplesse et sérénité grâce à une pratique alliant mouvement, souffle et relaxation sonore.
           </p>
+          <p>Sessions available in French or English.</p>
           <a className="btn-outline" href="#about">
-            Read more
+            En savoir plus
           </a>
         </div>
 
