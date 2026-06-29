@@ -1,5 +1,5 @@
-import { practices } from '../data.js'
-import './Practices.css'
+import { practices } from "../data.js";
+import "./Practices.css";
 
 export default function Practices() {
   return (
@@ -12,13 +12,17 @@ export default function Practices() {
             <article className="card" key={p.title}>
               <div className="card__img">
                 <img src={p.img} alt={p.title} />
+                <div className="card__overlay">
+                  <h3 className="card__title">{p.title}</h3>
+                  <a className="card__more" href="#practices">
+                    More
+                  </a>
+                </div>
               </div>
-              <h3 className="card__title">{p.title}</h3>
-              <a className="card__more" href="#practices">More</a>
             </article>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

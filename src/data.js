@@ -1,12 +1,3 @@
-// ============================================================
-//  All editable content lives here.
-//
-//  IMAGES: the defaults are branded placeholders so the site looks
-//  complete out of the box. To use your own photos, drop them in the
-//  /public folder (e.g. /public/images/hatha.jpg) and replace the URL
-//  with "/images/hatha.jpg".
-// ============================================================
-
 // Helper that builds a yellow-on-black placeholder so empty slots look intentional.
 const ph = (w, h, label) =>
   `https://placehold.co/${w}x${h}/1a1a1a/ffc107?font=space-mono&text=${encodeURIComponent(label)}`;
@@ -18,17 +9,12 @@ export const heroSlides = [
   "images/lotus2.jpg",
 ];
 
-export const aboutImage = "images/indiav2.jpg"
+export const aboutImage = "images/indiav2.jpg";
 
 export const practices = [
-  { title: "Hatha Yoga", img: ph(400, 300, "Hatha") },
-  { title: "Iyengar", img: ph(400, 300, "Iyengar") },
-  { title: "Jivamukti Yoga", img: ph(400, 300, "Jivamukti") },
-  { title: "Hot Yoga", img: ph(400, 300, "Hot Yoga") },
-  { title: "Hatha Vinyasa", img: ph(400, 300, "Vinyasa") },
-  { title: "India", img: ph(400, 300, "Meditation") },
-  { title: "Kundalini", img: ph(400, 300, "Kundalini") },
-  { title: "Power Yoga", img: ph(400, 300, "Power") },
+  { title: "Vinyasa Yoga", img: "images/water.jpg" },
+  { title: "Soma Yin Yoga", img: "images/lotus2.jpg" },
+  { title: "Bain sonore", img: "images/bowl.png" },
 ];
 
 export const featureBoxes = [
@@ -59,14 +45,14 @@ export const cities = [
 
 export const testimonials = [
   {
-    name: "Jessica",
-    avatar: ph(120, 120, ":)"),
-    body: "I highly recommend India's yoga lessons - if you feel the need to reconnect your mind and body then look no further! India's calm and soothing voice will immediately put you at ease from the start and you'll feel your body relax with every breath 🧘",
-  },
-  {
     name: "Hélène",
     avatar: ph(120, 120, ":)"),
     body: "Depuis 2024 , j'apprécie beaucoup les cours de Hatha et Yin Yoga d' India avec et sans musique. Bienveillance et Douceur dans sa pratique. Quelques exercices de méditation guidée relaxante.Une voix très apaisante et une touche ' so British' qui signent sa singularité.",
+  },
+  {
+    name: "Jessica",
+    avatar: ph(120, 120, ":)"),
+    body: "I highly recommend India's yoga lessons - if you feel the need to reconnect your mind and body then look no further! India's calm and soothing voice will immediately put you at ease from the start and you'll feel your body relax with every breath 🧘",
   },
   {
     name: "Michelle W.",

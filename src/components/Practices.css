@@ -3,55 +3,103 @@
   padding: 70px 0;
 }
 
-.practices .section-title { margin-bottom: 46px; }
+.practices .section-title {
+  margin-bottom: 46px;
+}
 
 .practices__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
   gap: 26px;
+  justify-content: center;
 }
 
 .card {
-  background: var(--white);
   border-radius: var(--radius);
-  padding: 14px 14px 22px;
-  text-align: center;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .card__img {
-  border-radius: 4px;
-  overflow: hidden;
-  margin-bottom: 16px;
+  position: relative; /* anchor for the overlay */
 }
+
 .card__img img {
   width: 100%;
-  height: 150px;
+  height: 260px;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  display: block;
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
 }
-.card:hover .card__img img { transform: scale(1.05); }
+
+.card__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 24px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.15) 55%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  transition: background 0.45s ease;
+}
+
+/* smooth hover changes */
+.card:hover .card__img img {
+  filter: brightness(0.85); /* gently dim the photo */
+}
+.card:hover .card__overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+}
 
 .card__title {
   font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease; /* animate the size change */
+}
+
+.card:hover .card__title {
+  transform: scale(1.18); /* title grows on hover */
 }
 
 .card__more {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  border-bottom: 1.5px solid var(--ink);
+  font-size: 0.85rem;
+  color: #fff;
+  border-bottom: 1.5px solid #fff;
   padding-bottom: 2px;
 }
-.card__more:hover { color: var(--gold); border-color: var(--gold); }
+.card__more:hover {
+  color: var(--yellow);
+  border-color: var(--yellow);
+}
 
 @media (max-width: 980px) {
-  .practices__grid { grid-template-columns: repeat(2, 1fr); }
+  .practices__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 480px) {
-  .practices__grid { grid-template-columns: 1fr; }
+  .practices__grid {
+    grid-template-columns: 1fr;
+  }
 }
