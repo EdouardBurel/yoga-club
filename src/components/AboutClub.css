@@ -1,6 +1,6 @@
 .about {
   padding: 80px 0;
-  background: var(--white);
+  background: #ebf8ee;
 }
 
 .about__grid {
@@ -12,15 +12,30 @@
 
 .about__text {
   text-align: center;
-  max-width: 440px;
+  max-width: 480px; /* a touch wider for the larger text */
   margin-inline: auto;
 }
 
 .about__logo {
   display: block;
-  width: 250px;
+  width: clamp(180px, 22vw, 240px); /* much bigger — was 110px */
   height: auto;
-  margin: 0 auto 16px;
+  margin: 0 auto 24px;
+}
+
+.about__text p {
+  color: var(--ink-soft);
+  font-size: 1.2rem; /* bigger — was ~1rem */
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.about__italic {
+  font-style: italic;
+}
+
+.about__text .btn-outline {
+  margin-top: 18px; /* breathing room before the button */
 }
 
 .about__title {
@@ -47,31 +62,18 @@
   min-height: 500px;
 }
 
-.about__disc {
-  position: absolute;
-  left: 50%;
-  bottom: 96px; /* KNOB 1: how high the disc sits behind her */
-  transform: translateX(-50%);
-  width: clamp(320px, 38vw, 430px); /* KNOB 2: disc size — bigger now */
-  height: clamp(320px, 38vw, 430px);
-  border-radius: 50%;
-  background:
-    radial-gradient(
-      circle at 42% 34%,
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0) 62%
-    ),
-    linear-gradient(180deg, #ffd64d 0%, #ffc107 50%, #f2a800 100%);
-  z-index: 0;
-}
-
 .about__person {
-  position: relative;
-  z-index: 1;
-  width: clamp(300px, 36vw, 400px); /* KNOB 3: her size vs the disc */
+  width: clamp(300px, 36vw, 420px);
   height: auto;
-  transform: translateY(-40px); /* raise her toward the circle's center */
-  filter: drop-shadow(0 12px 16px rgba(0, 0, 0, 0.16));
+  filter: none; /* remove the floating-card shadow */
+  -webkit-mask:
+    linear-gradient(to right, transparent, #000 10%, #000 90%, transparent),
+    linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-composite: source-in;
+  mask:
+    linear-gradient(to right, transparent, #000 10%, #000 90%, transparent),
+    linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
+  mask-composite: intersect;
 }
 
 @media (max-width: 760px) {

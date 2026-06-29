@@ -9,17 +9,20 @@ export default function AboutClub() {
           <img
             className="about__logo"
             src="images/logov.png"
-            alt="India Yoga logo"
+            alt="Yoga with India logo"
           />
           <h2 className="about__title">
             A propos <span>Yoga with India</span>
           </h2>
           <p>
-            Retrouvez calme, souplesse et sérénité grâce à une pratique alliant mouvement, souffle et relaxation sonore.
+            Retrouvez calme, souplesse et sérénité grâce à une pratique alliant
+            mouvement, souffle et relaxation sonore.
           </p>
-          <p>Sessions available in French or English.</p>
+          <p className="about__italic">
+            Sessions available in French or English.
+          </p>
           <a className="btn-outline" href="#about">
-            En savoir plus
+            Découvrir les offres
           </a>
         </div>
 
