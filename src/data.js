@@ -19,21 +19,20 @@ export const practices = [
 
 export const featureBoxes = [
   {
-    title: "Mindfulness",
+    title: "Yoga en entreprise / Séminaires (sur devis)",
     img: ph(700, 500, "Mindfulness"),
     body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis repellat ducimus sed vel amet rerum sit ut iste quaerat, quidem voluptas in natus error necessitatibus.",
   },
   {
-    title: "Yoga for Beginners",
-    img: ph(700, 500, "Beginners"),
-    body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates sequi culpa inventore! Vel esse accusantium architecto assumenda, dolorum cupiditate quaerat, doloremque vero magni quae ut non modi ipsum illo eveniet!",
+    title: "Yoga entre amis",
+    video: "images/video.mp4",
   },
 ];
 
 export const carouselSlides = [
-  ph(1200, 700, "Studio 1"),
-  ph(1200, 700, "Studio 2"),
-  ph(1200, 700, "Studio 3"),
+  "images/group.jpg",
+  "images/group1.jpg",
+  "images/indiav.jpg",
 ];
 
 export const ctaImage = ph(1400, 500, "On the mat");

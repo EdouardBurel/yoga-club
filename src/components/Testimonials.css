@@ -1,5 +1,5 @@
 .testimonials {
-  background: var(--yellow);
+  background: var(--cream);   /* was var(--yellow) — now distinct from Contact */
   padding: 70px 0;
 }
 .testimonials .section-title { margin-bottom: 44px; }

@@ -1,5 +1,5 @@
 .pcarousel {
-  background: var(--yellow);
+  background: var(--mint);
   padding: 50px 0;
 }
 
@@ -19,8 +19,8 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 .pcarousel__stage img {
-  width: 100%;
-  height: clamp(280px, 42vw, 460px);
+  width: 90%;
+  height: clamp(480px, 42vw, 760px);
   object-fit: cover;
 }
 

@@ -2,18 +2,20 @@
    Design tokens — change the brand here once, everywhere updates
    ============================================================ */
 :root {
-  --yellow: #ffc107;        /* signature golden yellow from the mockup */
-  --yellow-soft: #ffd454;
-  --gold: #b87a2b;          /* darker accent used on the word "Club" */
-  --ink: #1a1a1a;           /* near-black text + dark sections */
-  --ink-soft: #555;
+  --mint: #ebf8ee; /* light base (your About bg) */
+  --cream: #f6f1e7; /* warm light sections */
+  --sage: #9fbfad; /* soft green bands / secondary */
+  --gold: #c49a52; /* signature accent — was --yellow */
+  --gold-soft: #e3cd9b; /* light gold for the disc gradient */
+  --ink: #25453a; /* deep pine — was #1a1a1a black */
+  --ink-soft: #4f6b5e; /* muted green-grey body text */
   --white: #ffffff;
-  --surface: #eef1f4;       /* light grey-blue (navbar, light bands) */
-  --line: #e4e7eb;
+  --surface: #eef4f0; /* navbar — soft sage instead of grey-blue */
+  --line: #dce7e0;
 
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-mono: 'Space Mono', 'Courier New', monospace;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-mono: "Space Mono", "Courier New", monospace;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
 
   --maxw: 1180px;
   --radius: 6px;
@@ -24,9 +26,13 @@
    ============================================================ */
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -37,13 +43,27 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { display: block; max-width: 100%; }
+img {
+  display: block;
+  max-width: 100%;
+}
 
-a { color: inherit; text-decoration: none; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-h1, h2, h3 { margin: 0; line-height: 1.15; }
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.15;
+}
 
-button { font-family: inherit; cursor: pointer; }
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
 
 /* ============================================================
    Shared helpers
@@ -75,9 +95,14 @@ button { font-family: inherit; cursor: pointer; }
   background: transparent;
   color: var(--ink);
   border-radius: 2px;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
-.btn-outline:hover { background: var(--ink); color: var(--white); }
+.btn-outline:hover {
+  background: var(--ink);
+  color: var(--white);
+}
 
 /* Solid black button ("SUBMIT") */
 .btn-solid {
@@ -92,12 +117,22 @@ button { font-family: inherit; cursor: pointer; }
   border-radius: 2px;
   transition: opacity 0.2s ease;
 }
-.btn-solid:hover { opacity: 0.85; }
+.btn-solid:hover {
+  opacity: 0.85;
+}
 
 /* Accessibility: respect reduced-motion preference */
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
 }
 
-:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}

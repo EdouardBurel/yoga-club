@@ -19,7 +19,7 @@ export default function App() {
         <Practices />
         <FeatureBoxes />
         <PictureCarousel />
-        <CtaBanner />
+        {/* <CtaBanner /> */}
         <Contact />
         <Testimonials />
       </main>
