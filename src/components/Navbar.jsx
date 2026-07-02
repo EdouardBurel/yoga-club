@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Navbar.css";
 
-const links = ["Home", "About", "Our Master", "Profile", "Contact"];
+const links = ["A propos", "Ateliers", "Offres", "Contact"];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

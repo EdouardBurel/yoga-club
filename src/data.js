@@ -4,17 +4,34 @@ const ph = (w, h, label) =>
 
 export const heroSlides = [
   "images/indiaTitle.png",
-  "images/back.jpg",
   "images/bricks.jpg",
   "images/lotus2.jpg",
+  "images/back.jpg",
 ];
 
 export const aboutImage = "images/indiav2.jpg";
 
 export const practices = [
-  { title: "Vinyasa Yoga", img: "images/water.jpg" },
-  { title: "Soma Yin Yoga", img: "images/lotus2.jpg" },
-  { title: "Bain sonore", img: "images/bowl.png" },
+  {
+    title: "Hatha Yoga",
+    img: "images/hatha.png", // keep your current image path
+    desc: "Le yoga le plus traditionnel, accessible à tous, avec des exercices de respiration (pranayama) et des enchaînements de postures (asanas) tenues pendant plusieurs respirations. Il permet de travailler en douceur la souplesse, la concentration et le souffle.",
+  },
+  {
+    title: "Vinyasa Yoga",
+    img: "images/vinyasa.jpg",
+    desc: "Pratiqué sur un fond musical et à un rythme dynamique qui lie mouvement et respiration, le Vinyasa est basé sur un enchaînement fluide de postures favorisant à la fois la mobilité, le renforcement du corps et la concentration.",
+  },
+  {
+    title: "Somatic Yin Yoga",
+    img: "images/yin.jpg",
+    desc: "Une pratique douce et sécurisante de yoga, intégrant des outils inspirés de la médecine traditionnelle chinoise, pour réorganiser le corps vécu, énergiser les fascias et libérer les mémoires émotionnelles.",
+  },
+  {
+    title: "Voyage sonore",
+    img: "images/bowl.png",
+    desc: "Une parenthèse de détente où j'intègre différents instruments (bol de cristal, bol tibétain, carillon Koshi et autres instruments intuitifs) : les vibrations du son constituent un précieux outil d'apaisement permettant de favoriser le relâchement profond, la présence à soi et la régulation du système nerveux.",
+  },
 ];
 
 export const featureBoxes = [
@@ -54,9 +71,9 @@ export const testimonials = [
     body: "I highly recommend India's yoga lessons - if you feel the need to reconnect your mind and body then look no further! India's calm and soothing voice will immediately put you at ease from the start and you'll feel your body relax with every breath 🧘",
   },
   {
-    name: "Michelle W.",
+    name: "Weekend entre amies",
     avatar: ph(120, 120, ":)"),
-    body: "India speaks English fluently! I'm English and managed to understand her lesson!",
+    body: "Un moment magique et reposant entre filles avec une séance alliant force et sérénité. Un véritable régal...à refaire sans hésiter!"
   },
   {
     name: "Kerry",

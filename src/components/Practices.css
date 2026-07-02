@@ -85,12 +85,15 @@
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: #fff;
+  background: none;
+  border: none;
   border-bottom: 1.5px solid #fff;
-  padding-bottom: 2px;
+  padding: 0 0 2px;
+  cursor: pointer;
 }
 .card__more:hover {
-  color: var(--yellow);
-  border-color: var(--yellow);
+  color: var(--gold);
+  border-color: var(--gold);
 }
 
 @media (max-width: 980px) {

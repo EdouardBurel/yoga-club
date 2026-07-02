@@ -1,7 +1,12 @@
+import { useState } from "react";
 import { aboutImage } from "../data.js";
+import Modal from "./Modal.jsx";
+import AboutContent from "./AboutContent.jsx";
 import "./AboutClub.css";
 
 export default function AboutClub() {
+  const [showAbout, setShowAbout] = useState(false);
+
   return (
     <section className="about" id="about">
       <div className="container about__grid">
@@ -21,9 +26,9 @@ export default function AboutClub() {
           <p className="about__italic">
             Sessions available in French or English.
           </p>
-          <a className="btn-outline" href="#about">
-            Découvrir les offres
-          </a>
+          <button className="btn-outline" onClick={() => setShowAbout(true)}>
+            À propos
+          </button>
         </div>
 
         <div className="about__media">
@@ -31,10 +36,16 @@ export default function AboutClub() {
           <img
             className="about__person"
             src={aboutImage}
-            alt="India, yoga teacher, in prayer pose"
+            alt="India, professeure de yoga"
           />
         </div>
       </div>
+
+      {showAbout && (
+        <Modal title="À propos" onClose={() => setShowAbout(false)}>
+          <AboutContent />
+        </Modal>
+      )}
     </section>
   );
 }

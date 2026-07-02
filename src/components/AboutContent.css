@@ -1,0 +1,15 @@
+.bio p {
+  margin: 0 0 14px;
+}
+.bio strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.bio a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.bio a:hover {
+  color: var(--gold-deep, #a87f3c);
+}
