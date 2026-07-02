@@ -3,7 +3,7 @@ const ph = (w, h, label) =>
   `https://placehold.co/${w}x${h}/1a1a1a/ffc107?font=space-mono&text=${encodeURIComponent(label)}`;
 
 export const heroSlides = [
-  "images/indiaTitle.png",
+  "images/indiaTitlev.png",
   "images/bricks.jpg",
   "images/lotus2.jpg",
   "images/back.jpg",
