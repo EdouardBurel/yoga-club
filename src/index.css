@@ -32,10 +32,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; /* stops sideways drag */
 }
 
 body {
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden; /* belt and braces */
   font-family: var(--font-body);
   color: var(--ink);
   background: var(--white);
@@ -129,6 +132,16 @@ button {
   * {
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
+  }
+}
+
+/* Stack two-column sections on mobile */
+@media (max-width: 760px) {
+  .about__grid,
+  .contact__grid,
+  .features__grid,
+  .practices__grid {
+    grid-template-columns: 1fr;
   }
 }
 
