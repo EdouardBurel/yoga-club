@@ -2,24 +2,24 @@ import "./OffersContent.css";
 
 const offers = [
   {
-    name: "Cours individuel",
-    price: "à partir de 50 €",
+    name: "Yoga en entreprise (QVT) / Séminaires",
+    price: "",
     desc: "Une séance personnalisée, adaptée à votre niveau et à vos objectifs.",
   },
   {
-    name: "Cours en petit groupe",
-    price: "15 € / séance",
-    desc: "Pratiquez à plusieurs dans une ambiance conviviale et bienveillante.",
-  },
-  {
     name: "Yoga entre amis",
-    price: "sur devis",
+    price: "",
     desc: "Une séance privée organisée chez vous, entre proches.",
   },
   {
-    name: "Yoga en entreprise / séminaires",
-    price: "sur devis",
-    desc: "Offrez à vos équipes un moment de détente et de reconnexion.",
+    name: "Ateliers",
+    price: "voir galerie",
+    desc: "Thématiques variées : Yoga & Méditation, Yoga & Son, Yoga & Danse, Yoga & Créativité...",
+  },
+  {
+    name: "Soma Yin Yoga & relaxation Sonore",
+    price: "",
+    desc: "1 séance par mois à Bois-Guillaume (76230), sur inscription.",
   },
 ];
 
