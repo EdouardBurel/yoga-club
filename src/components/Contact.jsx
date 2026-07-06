@@ -71,7 +71,14 @@ export default function Contact() {
           <div className="contact__info-block">
             <h3>Email</h3>
             <a className="contact__mail" href="mailto:contact@yogawithindia.fr">
-              contact@yogawithindia.fr
+              contac@ywindia@gmail.com
+            </a>
+          </div>
+
+          <div className="contact__info-block">
+            <h3>Téléphone</h3>
+            <a className="contact__mail">
+              07 66 87 29 20
             </a>
           </div>
 

@@ -1,40 +1,30 @@
 .hero {
-  position: relative;
-  overflow: hidden;
-  background: var(--ink);
-}
-
-.hero__track {
+  background: #000;
   display: flex;
-  transition: transform 0.6s ease;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
 }
 
-.hero__slide {
-  flex: 0 0 100%;
-}
-
-.hero__slide img {
+.hero__img {
   width: 100%;
-  height: clamp(220px, 56vh, 620px);
-  object-fit: cover;
-  object-position: center 70%;
+  max-width: 1400px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
-.hero__dots {
-  position: absolute;
-  bottom: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-}
+/* phones: enlarge the image so it fills more of the screen width */
+@media (max-width: 600px) {
+  .hero {
+    overflow: hidden;
+  }
 
-.hero__dot {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.55);
-  padding: 0;
+  .hero__img {
+    max-width: none;
+    width: 100%;
+    transform: scale(1.4); /* enlarge from the centre */
+    transform-origin: center;
+  }
 }
-.hero__dot.is-active { background: var(--yellow); }
