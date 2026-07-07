@@ -4,9 +4,9 @@ const ph = (w, h, label) =>
 
 export const heroSlides = [
   "images/indiaTitle.jpg",
-  "images/bricks.jpg",
+  "images/hero1.jpg",
+  "images/hero2.jpg",
   "images/lotus2.jpg",
-  "images/back.jpg",
 ];
 
 export const aboutImage = "images/indiav2.jpg";
@@ -73,7 +73,7 @@ export const testimonials = [
   {
     name: "Weekend entre amies",
     avatar: ph(120, 120, ":)"),
-    body: "Un moment magique et reposant entre filles avec une séance alliant force et sérénité. Un véritable régal...à refaire sans hésiter!"
+    body: "Un moment magique et reposant entre filles avec une séance alliant force et sérénité. Un véritable régal...à refaire sans hésiter!",
   },
   {
     name: "Kerry",

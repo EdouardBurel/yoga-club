@@ -71,7 +71,7 @@ export default function Contact() {
           <div className="contact__info-block">
             <h3>Email</h3>
             <a className="contact__mail" href="mailto:contact@yogawithindia.fr">
-              contac@ywindia@gmail.com
+              contact@ywindia@gmail.com
             </a>
           </div>
 
@@ -87,7 +87,7 @@ export default function Contact() {
             <div className="contact__socials">
               <a
                 className="social"
-                href="#"
+                href="https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fyoga-with-india%2F%3FviewAsMember%3Dtrue&data=05%7C02%7C%7Cd17608eba84347f6a41d08dedc3e73ff%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639190357964289651%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=eiaX3aspLv8bqpy6EuXM%2FsVTzXK0Iem1dFQFQkZFADc%3D&reserved=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -106,7 +106,7 @@ export default function Contact() {
 
               <a
                 className="social"
-                href="#"
+                href="https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.instagram.com%2Fhealthyndie%3Figsh%3DMWZxZWpya3pjY3pqdQ%253D%253D%26utm_source%3Dqr&data=05%7C02%7C%7Cd17608eba84347f6a41d08dedc3e73ff%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639190357964303162%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=I%2B10Hwy%2F8sPETNYPM0x0fdMqkfoQJ7SPwBGkJqCpfyo%3D&reserved=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"

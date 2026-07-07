@@ -34,9 +34,10 @@
 .footer__links a {
   font-family: var(--font-mono);
   font-size: 0.8rem;
+  transition: color 0.2s ease;
 }
 .footer__links a:hover {
-  color: var(--yellow);
+  color: var(--gold);
 }
 
 .footer__link-btn {
@@ -47,6 +48,7 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  transition: color 0.2s ease;
 }
 .footer__link-btn:hover {
   color: var(--gold);

@@ -1,30 +1,38 @@
 .hero {
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 0;
+  position: relative;
+  background: #000; /* blends with the slides' black */
+  padding: 16px 0 34px; /* bottom room for the dots */
+}
+
+.hero__stage {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  aspect-ratio: 3 / 1; /* matches the 1920x640 slides exactly */
 }
 
 .hero__img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  max-width: 1400px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
+  height: 100%;
+  object-fit: cover; /* full image, no crop, black blends */
+  opacity: 0;
+  transition: opacity 0.9s ease; /* smooth cross-fade */
+}
+.hero__img.is-active {
+  opacity: 1;
 }
 
-/* phones: enlarge the image so it fills more of the screen width */
+.hero {
+  position: relative;
+  background: #000;
+  padding: 16px 0;        /* was 16px 0 34px — dots gone, padding evened out */
+}
+
 @media (max-width: 600px) {
   .hero {
-    overflow: hidden;
-  }
-
-  .hero__img {
-    max-width: none;
-    width: 100%;
-    transform: scale(1.4); /* enlarge from the centre */
-    transform-origin: center;
+    padding: 10px 0 30px;
   }
 }

@@ -2,9 +2,14 @@ import "./OffersContent.css";
 
 const offers = [
   {
-    name: "Yoga en entreprise (QVT) / Séminaires",
+    name: "Cours individuel",
     price: "",
     desc: "Une séance personnalisée, adaptée à votre niveau et à vos objectifs.",
+  },
+  {
+    name: "Cours en petit groupe",
+    price: "",
+    desc: "Pratiquez à plusieurs dans une ambiance conviviale et bienveillante.",
   },
   {
     name: "Yoga entre amis",
@@ -12,25 +17,31 @@ const offers = [
     desc: "Une séance privée organisée chez vous, entre proches.",
   },
   {
-    name: "Ateliers",
-    price: "voir galerie",
-    desc: "Thématiques variées : Yoga & Méditation, Yoga & Son, Yoga & Danse, Yoga & Créativité...",
+    name: "Yoga en entreprise / séminaires",
+    price: "",
+    desc: "Offrez à vos équipes un moment de détente et de reconnexion.",
   },
   {
-    name: "Soma Yin Yoga & relaxation Sonore",
-    price: "",
-    desc: "1 séance par mois à Bois-Guillaume (76230), sur inscription.",
+    name: "Ateliers",
+    gallery: true,
+    desc: "Des rendez-vous ponctuels dans l'année où je propose des ateliers autour de différentes thématiques invitant à explorer le yoga autrement. Chaque atelier est une expérience unique de partage, de découverte et de bien-être.",
   },
 ];
 
-export default function OffersContent({ onNavigate }) {
+export default function OffersContent({ onNavigate, onShowGallery }) {
   return (
     <div className="offers">
       {offers.map((o) => (
         <div className="offer" key={o.name}>
           <div className="offer__head">
             <h3 className="offer__name">{o.name}</h3>
-            <span className="offer__price">{o.price}</span>
+            {o.gallery ? (
+              <button className="offer__gallery-link" onClick={onShowGallery}>
+                voir galerie
+              </button>
+            ) : (
+              o.price && <span className="offer__price">{o.price}</span>
+            )}
           </div>
           <p className="offer__desc">{o.desc}</p>
         </div>
