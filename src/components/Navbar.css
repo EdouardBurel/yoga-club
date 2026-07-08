@@ -86,23 +86,14 @@
   .nav__links.is-open {
     max-height: 320px;
   }
+
+  /* dropdown links: full-width rows with side padding */
   .nav__links a {
-    font-family: "Marcellus", Georgia, serif;
-    font-size: 1.05rem;
-    letter-spacing: 0.06em;
-    color: var(--ink);
-    padding: 4px 0;
-    border-bottom: 2px solid transparent;
-    transition:
-      color 0.2s ease,
-      border-color 0.2s ease;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--line);
   }
 
-  .nav__links a:hover {
-    color: var(--gold); /* text turns gold/orange */
-    border-color: var(--gold); /* underline matches */
-  }
-  /* nice touch: bars morph into an X when open */
+  /* bars morph into an X when open */
   .nav__toggle.is-open span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
   }
@@ -111,13 +102,5 @@
   }
   .nav__toggle.is-open span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
-  }
-  section[id] {
-    scroll-margin-top: 80px; /* navbar height + a little breathing room */
-  }
-
-  .nav__links a {
-    padding: 14px 24px; /* 24px left/right breathing room */
-    border-bottom: 1px solid var(--line);
   }
 }
