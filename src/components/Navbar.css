@@ -115,4 +115,9 @@
   section[id] {
     scroll-margin-top: 80px; /* navbar height + a little breathing room */
   }
+
+  .nav__links a {
+    padding: 14px 24px; /* 24px left/right breathing room */
+    border-bottom: 1px solid var(--line);
+  }
 }
