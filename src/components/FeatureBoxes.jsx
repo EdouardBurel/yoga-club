@@ -25,7 +25,7 @@ export default function FeatureBoxes() {
     <section className="features" id="offres">
       <div className="container features__grid">
         <div className="feature-cta">
-          <h3 className="feature-cta__title">Nos offres</h3>
+          <h3 className="feature-cta__title">Mes offres</h3>
           <p className="feature-cta__text">
             Cours individuels, en petit groupe, entre amis ou en entreprise.
           </p>
