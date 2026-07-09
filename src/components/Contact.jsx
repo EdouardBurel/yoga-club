@@ -33,7 +33,7 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Rdv tel
+            Téléphone
           </a>
 
           <div className="contact__divider" aria-hidden="true">
