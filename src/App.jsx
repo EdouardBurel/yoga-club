@@ -8,10 +8,13 @@ import CtaBanner from './components/CtaBanner.jsx'
 import Contact from './components/Contact.jsx'
 import Testimonials from './components/Testimonials.jsx'
 import Footer from './components/Footer.jsx'
+import Announcement from './components/Announcement.jsx'
+
 
 export default function App() {
   return (
     <>
+      <Announcement />
       <Navbar />
       <main>
         <Hero />

@@ -13,8 +13,9 @@
   --surface: #eef4f0; /* navbar — soft sage instead of grey-blue */
   --line: #dce7e0;
 
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-mono: "Space Mono", "Courier New", monospace;
+  --font-display: "Marcellus", Georgia, serif;
+  --font-mono:
+    "Jost", system-ui, sans-serif; /* keeps the token name; new voice */
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
 
   --maxw: 1180px;

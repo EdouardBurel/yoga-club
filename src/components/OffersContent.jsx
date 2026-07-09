@@ -2,22 +2,12 @@ import "./OffersContent.css";
 
 const offers = [
   {
-    name: "Cours individuel",
-    price: "",
-    desc: "Une séance personnalisée, adaptée à votre niveau et à vos objectifs.",
-  },
-  {
-    name: "Cours en petit groupe",
-    price: "",
-    desc: "Pratiquez à plusieurs dans une ambiance conviviale et bienveillante.",
-  },
-  {
     name: "Yoga entre amis",
     price: "",
     desc: "Une séance privée organisée chez vous, entre proches.",
   },
   {
-    name: "Yoga en entreprise / séminaires",
+    name: "Yoga en entreprise (QVCT) / Séminaire",
     price: "",
     desc: "Offrez à vos équipes un moment de détente et de reconnexion.",
   },

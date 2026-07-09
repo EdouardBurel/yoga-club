@@ -27,19 +27,13 @@ export default function Contact() {
             contact@ywindia.com
           </a>
 
-          <a className="contact__phone" href="tel:+33612345678">
-            <svg
-              viewBox="0 0 24 24"
-              width="22"
-              height="22"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              aria-hidden="true"
-            >
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z" />
-            </svg>
-            06 12 34 56 78
+          <a
+            className="btn-solid"
+            href="https://calendly.com/indeev/yoga-with-india"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Rdv tel
           </a>
 
           <div className="contact__divider" aria-hidden="true">
@@ -49,7 +43,7 @@ export default function Contact() {
           <div className="contact__socials">
             <a
               className="social"
-              href="https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fyoga-with-india%2F%3FviewAsMember%3Dtrue&data=05%7C02%7C%7Cd17608eba84347f6a41d08dedc3e73ff%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639190357964289651%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=eiaX3aspLv8bqpy6EuXM%2FsVTzXK0Iem1dFQFQkZFADc%3D&reserved=0"
+              href="https://www.linkedin.com/company/yoga-with-india/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -68,7 +62,7 @@ export default function Contact() {
 
             <a
               className="social"
-              href="https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.instagram.com%2Fhealthyndie%3Figsh%3DMWZxZWpya3pjY3pqdQ%253D%253D%26utm_source%3Dqr&data=05%7C02%7C%7Cd17608eba84347f6a41d08dedc3e73ff%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639190357964303162%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=I%2B10Hwy%2F8sPETNYPM0x0fdMqkfoQJ7SPwBGkJqCpfyo%3D&reserved=0"
+              href="https://www.instagram.com/healthyndie/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"

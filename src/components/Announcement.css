@@ -1,0 +1,19 @@
+.announce {
+  text-align: center;
+}
+
+.announce__event {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.announce p {
+  text-align: left;
+  margin-bottom: 22px;
+}
+
+.announce__cta {
+  display: inline-block;
+}

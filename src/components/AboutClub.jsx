@@ -17,11 +17,11 @@ export default function AboutClub() {
             alt="Yoga with India logo"
           />
           <h2 className="about__title">
-            A propos <span>Yoga with India</span>
+            <span>Yoga with India</span>
           </h2>
           <p>
-            Retrouvez calme, souplesse et sérénité grâce à une pratique alliant
-            mouvement, souffle et relaxation sonore.
+            <strong>Retrouvez calme, souplesse et sérénité grâce à une pratique alliant
+            mouvement, souffle et relaxation sonore.</strong>
           </p>
           <p className="about__italic">
             Sessions available in French or English.

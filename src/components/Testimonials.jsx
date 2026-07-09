@@ -5,7 +5,7 @@ export default function Testimonials() {
   return (
     <section className="testimonials" id="testimonials">
       <div className="container">
-        <h2 className="section-title">Testimonials</h2>
+        <h2 className="section-title">Avis</h2>
 
         <div className="testimonials__grid">
           {testimonials.map((t) => (
