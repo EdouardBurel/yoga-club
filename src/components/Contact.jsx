@@ -2,7 +2,7 @@ import { useState } from "react";
 import Modal from "./Modal.jsx";
 import "./Contact.css";
 
-const FORM_ENDPOINT = "https://formspree.io/f/mqpzyapa";
+const FORM_ENDPOINT = "https://formspree.io/f/xdenwpqq";
 
 // ---- sanitization & validation helpers ----
 const clean = (v, max) =>
