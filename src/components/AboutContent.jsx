@@ -37,7 +37,11 @@ export default function AboutContent() {
           Annie Au
         </a>
         ) et une autre en parallèle sur{" "}
-        <strong>le Son et les Neurosciences</strong> afin d’intégrer des{" "}
+        <strong>la sonothérapie et la méditation</strong> (avec{" "}
+        <a href="https://www.instagram.com/chaumetclotilde?igsh=YzlqMWZvczBqOGhu" target="_blank" rel="noopener noreferrer">
+          Clotilde Chaumet
+        </a>
+        ) afin d'intégrer des{" "}
         <strong>
           outils de relaxation sonore et de régulation du système nerveux
         </strong>{" "}

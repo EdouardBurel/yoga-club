@@ -41,7 +41,7 @@ export const featureBoxes = [
     body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis repellat ducimus sed vel amet rerum sit ut iste quaerat, quidem voluptas in natus error necessitatibus.",
   },
   {
-    title: "Yoga entre amis",
+    title: "Yoga à domicile",
     video: "images/video.mp4",
   },
 ];

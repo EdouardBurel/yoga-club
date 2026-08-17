@@ -2,7 +2,7 @@ import "./OffersContent.css";
 
 const offers = [
   {
-    name: "Yoga entre amis",
+    name: "Yoga à domicile",
     price: "",
     desc: "Une séance privée organisée chez vous, entre proches.",
   },

@@ -57,7 +57,7 @@ export default function FeatureBoxes() {
             muted
             playsInline
           />
-          <span className="feature-video__title">Yoga entre amis</span>
+          <span className="feature-video__title">Yoga à domicile</span>
         </div>
       </div>
 
