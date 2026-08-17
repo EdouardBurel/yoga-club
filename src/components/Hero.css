@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   padding: 16px 0;
-  overflow: hidden;          /* clips the mobile zoom spill */
+  overflow: hidden; /* clips the mobile zoom spill */
 }
 
 .hero__img {
@@ -23,7 +23,9 @@
   }
   .hero__img {
     max-width: none;
-    transform: scale(1.35);
-    transform-origin: center;
+    height: 260px; /* the height you want — tune this number */
+    object-fit: cover; /* fills the box; crops black sides */
+    object-position: center;
+    transform: none; /* no double-zoom */
   }
 }
