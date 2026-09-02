@@ -1,31 +1,33 @@
 .hero {
   background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 16px 0;
-  overflow: hidden; /* clips the mobile zoom spill */
+  overflow: hidden;
+}
+
+.hero__stage {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  aspect-ratio: 3 / 1;        /* matches your 1920x640 slides */
 }
 
 .hero__img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  max-width: 1400px;
-  height: auto;
+  height: 100%;
   object-fit: contain;
-  display: block;
-  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.9s ease;
 }
+.hero__img.is-active { opacity: 1; }
 
-/* phones: enlarge from the centre (stays perfectly centred) */
 @media (max-width: 600px) {
-  .hero {
-    padding: 10px 0;
+  .hero { padding: 10px 0; }
+  .hero__stage {
+    aspect-ratio: auto;
+    height: 260px;             /* taller on phones — tune this */
   }
-  .hero__img {
-    max-width: none;
-    height: 260px; /* the height you want — tune this number */
-    object-fit: cover; /* fills the box; crops black sides */
-    object-position: center;
-    transform: none; /* no double-zoom */
-  }
+  .hero__img { object-fit: cover; }   /* fills the taller box, crops black sides */
 }
