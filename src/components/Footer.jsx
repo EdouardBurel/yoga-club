@@ -1,9 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "./Modal.jsx";
 import "./Footer.css";
 
 export default function Footer() {
   const [open, setOpen] = useState(null); // 'legal' | 'cgv' | null
+
+  // open the right modal when the page is loaded with #cgv / #mentions-legales
+  useEffect(() => {
+    const applyHash = () => {
+      const h = window.location.hash.replace("#", "");
+      if (h === "cgv") setOpen("cgv");
+      else if (h === "mentions-legales") setOpen("legal");
+    };
+    applyHash();
+    window.addEventListener("hashchange", applyHash);
+    return () => window.removeEventListener("hashchange", applyHash);
+  }, []);
+
+  const openModal = (which) => {
+    setOpen(which);
+    window.history.replaceState(
+      null,
+      "",
+      which === "cgv" ? "#cgv" : "#mentions-legales",
+    );
+  };
+
+  const closeModal = () => {
+    setOpen(null);
+    window.history.replaceState(null, "", window.location.pathname);
+  };
 
   return (
     <>
@@ -18,11 +44,14 @@ export default function Footer() {
             <a href="#contact">Contact</a>
             <button
               className="footer__link-btn"
-              onClick={() => setOpen("legal")}
+              onClick={() => openModal("legal")}
             >
               Mentions légales
             </button>
-            <button className="footer__link-btn" onClick={() => setOpen("cgv")}>
+            <button
+              className="footer__link-btn"
+              onClick={() => openModal("cgv")}
+            >
               CGV
             </button>
           </nav>
@@ -30,7 +59,7 @@ export default function Footer() {
       </footer>
 
       {open === "legal" && (
-        <Modal title="Mentions légales" onClose={() => setOpen(null)}>
+        <Modal title="Mentions légales" onClose={closeModal}>
           <h3>1 — Édition du site</h3>
           <p>
             En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour
@@ -48,14 +77,14 @@ export default function Footer() {
             SIRET 797&nbsp;874&nbsp;773&nbsp;00030 — Adresse postale : Le
             Fairway, 76380 Montigny, FRANCE.
             <br />
-            <strong>Directeur de la publication :</strong> India Burel —
-            contact : contact.ywindia@gmail.com
+            <strong>Directeur de la publication :</strong> India Burel — contact
+            : contact.ywindia@gmail.com
             <br />
             <strong>Hébergeur :</strong> GitHub, Inc., 88 Colin P. Kelly Jr.
             Street, San Francisco, CA 94107, USA
             <br />
-            <strong>Délégué à la protection des données :</strong> India Burel
-            — contact : contact.ywindia@gmail.com
+            <strong>Délégué à la protection des données :</strong> India Burel —
+            contact : contact.ywindia@gmail.com
             <br />
             <strong>Autres contributeurs :</strong> Edouard Burel (Web
             Designer).
@@ -71,14 +100,14 @@ export default function Footer() {
           <p>
             Toute reproduction, représentation, modification, publication,
             adaptation de tout ou partie des éléments du site, quel que soit le
-            moyen ou le procédé utilisé, est interdite, sauf autorisation
-            écrite préalable d'India Burel.
+            moyen ou le procédé utilisé, est interdite, sauf autorisation écrite
+            préalable d'India Burel.
           </p>
           <p>
             Toute exploitation non autorisée du site ou de l'un quelconque des
             éléments qu'il contient sera considérée comme constitutive d'une
-            contrefaçon et poursuivie conformément aux dispositions des
-            articles L.335-2 et suivants du Code de Propriété Intellectuelle.
+            contrefaçon et poursuivie conformément aux dispositions des articles
+            L.335-2 et suivants du Code de Propriété Intellectuelle.
           </p>
 
           <h3>3 — Limitations de responsabilité</h3>
@@ -117,10 +146,10 @@ export default function Footer() {
           <h3>4 — CNIL et gestion des données personnelles</h3>
           <p>
             Conformément aux dispositions de la loi 78-17 du 6 janvier 1978
-            modifiée, l'utilisateur du site https://www.ywindia.com dispose
-            d'un droit d'accès, de modification et de suppression des
-            informations collectées. Pour exercer ce droit, envoyez un message
-            à notre Délégué à la Protection des Données : India Burel —
+            modifiée, l'utilisateur du site https://www.ywindia.com dispose d'un
+            droit d'accès, de modification et de suppression des informations
+            collectées. Pour exercer ce droit, envoyez un message à notre
+            Délégué à la Protection des Données : India Burel —
             contact.ywindia@gmail.com.
           </p>
 
@@ -132,8 +161,8 @@ export default function Footer() {
             https://www.ywindia.com.
           </p>
           <p>
-            La navigation sur le site https://www.ywindia.com est susceptible
-            de provoquer l'installation de cookie(s) sur l'ordinateur de
+            La navigation sur le site https://www.ywindia.com est susceptible de
+            provoquer l'installation de cookie(s) sur l'ordinateur de
             l'utilisateur. Un « cookie » est un fichier de petite taille qui
             enregistre des informations relatives à la navigation d'un
             utilisateur sur un site. Les données ainsi obtenues permettent
@@ -155,14 +184,14 @@ export default function Footer() {
       )}
 
       {open === "cgv" && (
-        <Modal title="Conditions Générales de Vente" onClose={() => setOpen(null)}>
-          <p className="cgv__date">Dernière mise à jour : 01.09.2026</p>
+        <Modal title="Conditions Générales de Vente" onClose={closeModal}>
+          <p className="cgv__date">Dernière mise à jour : 29.09.2026</p>
 
           <h3>Article 1 — Identité du prestataire</h3>
           <p>
-            Les présentes Conditions Générales de Vente (ci-après «&nbsp;CGV&nbsp;»)
-            régissent les prestations de yoga proposées sous le nom commercial
-            Yoga with India par :
+            Les présentes Conditions Générales de Vente (ci-après
+            «&nbsp;CGV&nbsp;») régissent les prestations de yoga proposées sous
+            le nom commercial Yoga with India par :
           </p>
           <p>
             BUREL India — Micro-Entrepreneur
@@ -188,7 +217,9 @@ export default function Footer() {
             <li>des séances collectives et ateliers en studio</li>
             <li>des séances de yoga en entreprise ou sur le lieu de travail</li>
             <li>des ateliers ou événements ponctuels</li>
-            <li>toute autre prestation présentée sur le site Yoga with India</li>
+            <li>
+              toute autre prestation présentée sur le site Yoga with India
+            </li>
           </ul>
           <p>
             Les caractéristiques, durées et tarifs des prestations sont
@@ -293,7 +324,41 @@ export default function Footer() {
             communiquées au Client avant la réservation.
           </p>
 
-          <h3>Article 8 — Annulation par Yoga with India</h3>
+          <h3>Article 8 — Annulation des week-ends bien-être</h3>
+          <p>
+            L'organisation d'un week-end bien-être implique des engagements
+            financiers préalables de la Prestataire auprès du lieu d'accueil et,
+            le cas échéant, d'autres prestataires. Des conditions spécifiques
+            d'annulation s'appliquent donc à ces prestations.
+          </p>
+          <p>
+            Pour toute annulation communiquée par écrit plus de deux mois avant
+            la date de début du séjour, 50&nbsp;% du montant total de la
+            réservation sera remboursé. À compter de deux mois avant la date de
+            début du séjour, les sommes versées ne seront plus remboursables,
+            sous réserve des dispositions légales impératives applicables.
+          </p>
+          <p>
+            Toute demande d'annulation doit être adressée par écrit à{" "}
+            <a href="mailto:contact.ywindia@gmail.com">
+              contact.ywindia@gmail.com
+            </a>
+            .
+          </p>
+          <p>
+            En cas d'interruption du séjour à l'initiative du participant après
+            son commencement, les prestations non consommées ne donnent pas lieu
+            à remboursement, sous réserve des dispositions légales impératives
+            applicables.
+          </p>
+          <p>
+            Lorsque certaines prestations sont réservées ou réglées directement
+            auprès du lieu d'accueil ou d'un autre prestataire, les conditions
+            d'annulation et de remboursement de ce dernier s'appliquent aux
+            sommes qui lui sont directement versées.
+          </p>
+
+          <h3>Article 9 — Annulation par Yoga with India</h3>
           <p>
             Yoga with India se réserve la possibilité d'annuler ou de reporter
             une séance notamment en cas de maladie, de force majeure, de
@@ -308,7 +373,7 @@ export default function Footer() {
             des dispositions légales impératives applicables.
           </p>
 
-          <h3>Article 9 — Retard</h3>
+          <h3>Article 10 — Retard</h3>
           <p>
             Le Client est invité à respecter l'horaire prévu afin de permettre
             le bon déroulement de la séance. En cas de retard du Client, la
@@ -322,7 +387,9 @@ export default function Footer() {
             proposée au Client.
           </p>
 
-          <h3>Article 10 — Santé, aptitude physique et responsabilité du Client</h3>
+          <h3>
+            Article 11 — Santé, aptitude physique et responsabilité du Client
+          </h3>
           <p>
             Le Client est responsable de s'assurer que son état de santé lui
             permet de pratiquer le yoga et les activités proposées. Il lui
@@ -346,7 +413,7 @@ export default function Footer() {
             légales applicables.
           </p>
 
-          <h3>Article 11 — Cours à domicile</h3>
+          <h3>Article 12 — Cours à domicile</h3>
           <p>
             Pour les prestations réalisées au domicile du Client, celui-ci
             s'engage à mettre à disposition un espace suffisamment dégagé,
@@ -360,7 +427,7 @@ export default function Footer() {
             nécessaire à la séance sont précisées lors de la réservation.
           </p>
 
-          <h3>Article 12 — Droit de rétractation</h3>
+          <h3>Article 13 — Droit de rétractation</h3>
           <p>
             Lorsqu'un Client consommateur conclut à distance un contrat de
             prestation de services, notamment par internet, il bénéficie en
@@ -393,7 +460,7 @@ export default function Footer() {
             au droit de rétractation.
           </p>
 
-          <h3>Article 13 — Responsabilité et assurance</h3>
+          <h3>Article 14 — Responsabilité et assurance</h3>
           <p>
             La Prestataire déclare être titulaire d'une assurance responsabilité
             civile professionnelle couvrant son activité d'enseignement du yoga.
@@ -407,7 +474,7 @@ export default function Footer() {
             légalement établie.
           </p>
 
-          <h3>Article 14 — Force majeure</h3>
+          <h3>Article 15 — Force majeure</h3>
           <p>
             Aucune des parties ne pourra être tenue responsable d'un manquement
             à ses obligations lorsque celui-ci résulte d'un événement de force
@@ -416,7 +483,7 @@ export default function Footer() {
             entre les parties.
           </p>
 
-          <h3>Article 15 — Données personnelles</h3>
+          <h3>Article 16 — Données personnelles</h3>
           <p>
             Les données personnelles recueillies lors d'une prise de contact,
             d'une réservation ou d'un paiement sont utilisées uniquement dans le
@@ -433,7 +500,7 @@ export default function Footer() {
             site.
           </p>
 
-          <h3>Article 16 — Propriété intellectuelle</h3>
+          <h3>Article 17 — Propriété intellectuelle</h3>
           <p>
             Les contenus, textes, supports pédagogiques, séquences, documents,
             photographies et autres éléments créés et communiqués par Yoga with
@@ -443,7 +510,7 @@ export default function Footer() {
             autorisation préalable.
           </p>
 
-          <h3>Article 17 — Litige et médiation de la consommation</h3>
+          <h3>Article 18 — Litige et médiation de la consommation</h3>
           <p>
             En cas de litige entre le Client et l'entreprise, ceux-ci
             s'efforceront de le résoudre à l'amiable (le Client adressera une
@@ -464,7 +531,7 @@ export default function Footer() {
             www.mediateur-consommation-smp.fr
           </p>
 
-          <h3>Article 18 — Droit applicable</h3>
+          <h3>Article 19 — Droit applicable</h3>
           <p>Les présentes CGV sont soumises au droit français.</p>
         </Modal>
       )}

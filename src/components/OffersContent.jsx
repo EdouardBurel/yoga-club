@@ -16,6 +16,13 @@ const offers = [
     gallery: true,
     desc: "Des rendez-vous ponctuels dans l'année où je propose des ateliers autour de différentes thématiques invitant à explorer le yoga autrement. Chaque atelier est une expérience unique de partage, de découverte et de bien-être.",
   },
+
+  {
+    name: "Week-end bien-être",
+    price: "sur devis",
+    desc: "2 jours pour souffler, s'alléger, et repartir avec une sérénité durable.",
+    pdf: "weekend-bien-etre.pdf",
+  },
 ];
 
 export default function OffersContent({ onNavigate, onShowGallery }) {
@@ -34,6 +41,16 @@ export default function OffersContent({ onNavigate, onShowGallery }) {
             )}
           </div>
           <p className="offer__desc">{o.desc}</p>
+          {o.pdf && (
+            <a
+              className="offer__pdf"
+              href={o.pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              → Voir le programme (PDF)
+            </a>
+          )}
         </div>
       ))}
       <button className="btn-solid offers__cta" onClick={onNavigate}>
