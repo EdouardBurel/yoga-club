@@ -18,10 +18,9 @@ const offers = [
   },
 
   {
-    name: "Week-end bien-être",
-    price: "sur devis",
+    name: "Weekend Yoga break with India 2027",
     desc: "2 jours pour souffler, s'alléger, et repartir avec une sérénité durable.",
-    pdf: "weekend-bien-etre.pdf",
+    pdf: "weekend-yoga-2027.pdf",
   },
 ];
 
