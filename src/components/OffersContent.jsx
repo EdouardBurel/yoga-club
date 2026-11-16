@@ -2,6 +2,11 @@ import "./OffersContent.css";
 
 const offers = [
   {
+    name: "Weekend Yoga break with India 2027",
+    desc: "2 jours pour souffler, s'alléger, et repartir avec une sérénité durable.",
+    pdf: "weekend-yoga-2027.pdf",
+  },
+  {
     name: "Yoga à domicile",
     price: "",
     desc: "Une séance privée organisée chez vous, entre proches.",
@@ -15,12 +20,6 @@ const offers = [
     name: "Ateliers",
     gallery: true,
     desc: "Des rendez-vous ponctuels dans l'année où je propose des ateliers autour de différentes thématiques invitant à explorer le yoga autrement. Chaque atelier est une expérience unique de partage, de découverte et de bien-être.",
-  },
-
-  {
-    name: "Weekend Yoga break with India 2027",
-    desc: "2 jours pour souffler, s'alléger, et repartir avec une sérénité durable.",
-    pdf: "weekend-yoga-2027.pdf",
   },
 ];
 
